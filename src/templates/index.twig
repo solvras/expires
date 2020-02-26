@@ -1,0 +1,40 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Expires plugin for Craft CMS 3.x
+ *
+ * Expires index.twig
+ *
+ * @author    Johannes Arnstad
+ * @copyright Copyright (c) 2020 Johannes Arnstad
+ * @link      https://solvr.no
+ * @package   Expires
+ * @since     0.0.1
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("solvr\\expires\\assetbundles\\expires\\ExpiresAsset") %}
+{% do view.registerAssetBundle("solvr\\expires\\assetbundles\\indexcpsection\\IndexCPSectionAsset") %}
+
+{% set docsUrl = "https://github.com/solvras/expires/blob/master/README.md" %}
+
+{% set title = "Expires" %}
+
+{% set pluginCpUrl = url('expires') %}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@solvr/expires/assetbundles/indexcpsection/dist', true) ~ '/img/Index-icon.svg' %}
+
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('expires') }}</a>
+    </div>
+{% endset %}
+
+{% set content %}
+    <h2>{{ "Index CP Section body goes here"|t('expires') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}

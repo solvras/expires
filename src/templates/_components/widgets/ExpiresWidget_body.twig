@@ -1,0 +1,20 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Expires plugin for Craft CMS
+ *
+ * ExpiresWidget Widget Body
+ *
+ * @author    Johannes Arnstad
+ * @copyright Copyright (c) 2020 Johannes Arnstad
+ * @link      https://solvr.no
+ * @package   Expires
+ * @since     0.0.1
+ */
+#}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@solvr/expires/assetbundles/expireswidgetwidget/dist', true) ~ '/img/ExpiresWidget-icon.svg' %}
+
+<img src="{{ iconUrl }}" height="64" width="64" />
+
+<p>{{ message }}</p>

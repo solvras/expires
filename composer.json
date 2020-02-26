@@ -1,0 +1,43 @@
+{
+    "name": "solvr/expires",
+    "description": "Get notifications when entries expire, and see if it has any relations that will be affected",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "expires"
+    ],
+    "support": {
+        "docs": "https://github.com/solvras/expires/blob/master/README.md",
+        "issues": "https://github.com/solvras/expires/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Johannes Arnstad",
+            "homepage": "https://solvr.no"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "solvr\\expires\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Expires",
+        "handle": "expires",
+        "hasCpSettings": true,
+        "hasCpSection": true,
+        "changelogUrl": "https://raw.githubusercontent.com/solvras/expires/master/CHANGELOG.md",
+        "components": {
+            "expiresService": "solvr\\expires\\services\\ExpiresService"
+        },
+        "class": "solvr\\expires\\Expires"
+    }
+}

@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Expires plugin for Craft CMS 3.x
+ *
+ * Expires Settings.twig
+ *
+ * @author    Johannes Arnstad
+ * @copyright Copyright (c) 2020 Johannes Arnstad
+ * @link      https://solvr.no
+ * @package   Expires
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("solvr\\expires\\assetbundles\\expires\\ExpiresAsset") %}
+
+{{ forms.textField({
+    label: 'Some Field',
+    instructions: 'Enter some setting here.',
+    id: 'someAttribute',
+    name: 'someAttribute',
+    value: settings['someAttribute']})
+}}
